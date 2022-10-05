@@ -23,14 +23,11 @@ ftx = ccxt.ftx(
 
 
 # Hyper parameters - inputs that will change the Trading Bot
-# static_timestamp = None
 TP_ATR = 3.0
 SL_ATR = 1.5
-PAIR_TO_PREDICT = 'ETH'
 Market = 'ETH-PERP'
 Side_Buy = "buy"
 Side_Sell = "sell"
-ratios = ['ETH']
 
 
 # stats dictionary
@@ -112,7 +109,7 @@ while True:
         DayBefore = today - timedelta(days=6)
         start = DayBefore.timestamp()
         end = today.timestamp() - 60 * 60
-        num_hours = 150
+        num_hours = 150  # arbitrary choice, just needs to exceed the seq len needed by the model
 
         # Creating the dataframe
         raw_df = pd.DataFrame()
