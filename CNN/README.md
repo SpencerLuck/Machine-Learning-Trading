@@ -1,1 +1,3 @@
-# CNN Trading
+# CNN Architecture for trade prediction
+
+Convolutional neural networks are used to make a simple prediction as to the direction of the next price movement. Two architectures using CNN's are provided. The first is a raw 1 dimensional CNN. The second is a more complex architecture that seeks to use a 1 dimensional CNN as a feature extraction mechanism much like CNN applications in computer vision, next bidirectional LSTM further abstract timeseries specific features followed by normal dense layers. The drawback of complex architectures is their data hungry nature. In my experience CNN's overfit far more easily on timeseries, therefore dataset size and quality is important if any utility is to be extracted from these networks.
